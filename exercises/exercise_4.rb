@@ -39,3 +39,15 @@ end
 
 yaletown.save
 
+@mens_stores = Store.where(mens_apparel: true)
+
+for store in @mens_stores
+  puts "name of stores: #{store.name} with an annual revenue of #{store.annual_revenue}"
+end
+
+@womens_store = Store.where(womens_apparel: true).where('annual_revenue < 1000000')
+
+for store in @womens_store
+  puts "name of stores: #{store.name} with an annual revenue of less than 1 Million which is #{store.annual_revenue}"
+end
+
