@@ -35,4 +35,5 @@ end
 gastown.save
 
 puts Store.count
+puts "Total store count now is: #{Store.count}"
 
